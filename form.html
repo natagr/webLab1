@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Форми</title>
+</head>
+
+<body>
+    <h1>Лабораторна робота №1</h1>
+    <h2>Робота з формами</h2>
+    <h2>Виконала студентка групи КН-31, Грабець Н. П.</h2>
+    <a href="index.html">На головну</a>
+    <h3>Завдання</h3>
+    <p>
+        Необхідно розробити форму для реєстрації студента у веб-системі. Необхідно заповнити наступні данні:
+    </p>
+    <ul>
+        <li>
+            основні дані про студента, включають ПІБ, назву групи (вибирається із списку), форму навчання(бюджет або контакт) реалізується у вигляді перемикача, коротку інформацію про студента, електрона адреса студента;
+        </li>
+        <li>
+            особисті дані студента, включають дані паспорта, ідентифікаційний код, рік народження, стать (реалізується у вигляді перемикача).
+        </li>
+    </ul>
+
+    <form action="" method="POST">
+        <fieldset>
+            <legend>Основні дані про студента</legend>
+            <label>ПІБ
+                <input id="Student_name" type="text">
+            </label>
+            <p>
+            <label>Назва групи
+                <select>
+                    <option>КН-31</option>
+                    <option>КН-32</option>
+                    <option>АнД-31</option>
+                </select>
+            </label>
+            </p>
+            <p>Форма навчання
+                <br />
+                <label>Бюджет<input id="budget" type="radio" name="Form"></label>
+                <label>Контракт<input id="contact" type="radio" name="Form"></label>
+            </p>
+            <label>Коротка інформацію про студента
+                <textarea rows="4" cols="50"></textarea>
+            </label>
+            <p>
+            <label>Електрона адреса студента
+                <input id="Student_email" type="email">
+            </label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Особисті дані студента</legend>
+            <label>Дані паспорта
+                <input id="Passport_data" type="text" pattern="[0-9]{9}" title="Паспортний номер повинен містити 9 цифр">
+            </label>
+            <p>
+            <label>Ідентифікаційний код
+                <input id="Passport_data" type="text" pattern="[0-9]{10}" title="Паспортний номер повинен містити 10 цифр">
+            </label>
+            </p>
+            <p>Рік народження
+                <input id="year" type="date">
+            </p>
+            <p>Cтать
+                <br />
+                <label>Чоловіча<input id="male" type="radio" name="gender"></label>
+                <label>Жіноча<input id="female" type="radio" name="gender"></label>
+            </p>
+        </fieldset>
+        <button type="submit">Відправити</button>
+    </form>
+</body>
+</html>
